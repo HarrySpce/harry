@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="harry dot report" property="og:title"/>
+    <meta content="💤" property="og:description"/>
+    <meta content="#ffafcc" data-react-helmet="true" name="theme-color"/>
+    <meta content="https://harry.report/img/index.png" property="og:image"/>
+    <title>harry dot report</title>
+    <link rel="icon" type="image/x-icon" href="img\index.png">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!-- no stylesheet!!!-->
+    <style>
+    body {
+    background-color: #111111;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 36px;
+    color: #5c5c5c;
+    margin: 25px;
+    line-height: 60%;
+    }
+    a, a:visited {
+    text-decoration: none;
+    color: #5c5c5c;
+    }
+    p {
+    opacity: 0; 
+    animation: fadeIn 1.5s ease forwards;
+    }
+    sup {
+    line-height: 0;
+    vertical-align: top;
+    }
+    #txt {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    color: #5c5c5c13;
+    font-size: 100px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1.2;
+    text-align: right;
+    }
+    #music {
+    color: #bbbbbb;
+    }
+    #top {
+    width: 100vw;
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(
+    to right,
+    #5f0f40 0%,
+    #5f0f40 20%,
+    #9a031e 20%,
+    #9a031e 40%,
+    #fb8b24 40%,
+    #fb8b24 60%,
+    #e36414 60%,
+    #e36414 80%,
+    #0f4c5c 80%,
+    #0f4c5c 100%
+    );
+    }
+    @media (max-width: 600px) {
+    body {
+    font-size: 22px;
+    }
+    #txt {
+    font-size: 45px;
+    right: 15px;
+    bottom: 15px;
+    }
+    }
+    @keyframes fadeIn {
+    to {
+    opacity: 1;
+    }
+    }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    <p>harry.report</p>
+    <p><a href="https://drive.google.com/drive/folders/1-Csj8Ue1OIQyKVOWNlkrqW9J56QYTGh-"><u>jpn<span style="color: #bbbbbb;"><b>23</b></span></u></a> <a href="https://drive.google.com/drive/folders/11ZD4TJaDgIPF7pT42s46d1adRHfmOzB8?usp=sharing"><u>jpn<span style="color: #bbbbbb;"><b>25</b></span></u></a></p>
+    <p><a href="https://x.com/harryspce"><u>twt</u></a> <s><a href="https://x.com/harryy2533"><u>twt</u></a></s></p>
+    <p><a href="https://steamcommunity.com/id/Harry06/"><u>steam</u></a> <a href="https://steamdb.info/calculator/76561198879010704/"><u>db</u></a> <a href="https://steamcommunity.com/id/harry23010"><u>alt</u></a></p>
+    <p><a href="https://github.com/HarrySpce"><u>github</u></a></p>
+    <p><a href="https://open.spotify.com/user/gh3nwsnbwsvfp5cfwlqtfzh91?si=d4394209ebe742dd"><u>spotify</u></a> <a href="https://np.harry.report"><u>np</u></a></p>
+    <p><a href="https://www.last.fm/user/Harry-06"><u>last.fm</u></a></p>
+    <br>
+    <p><a>current<sup>s</sup> ↓</a></p>
+    <p id="music">
+    <span>loading</span>
+    <span><span style="color: #5c5c5c;">by</span> loading...</span>
+    </p>
+    <br>
+    <p><a>>by the wall</a></p>
+    <p><a href="https://raid.report/xb/4611686018490214036"><u><s>Harry<span style="color: #bbbbbb;">#2533</span></s></u></a></p>
+    <p><a>43rd vh / 56th wr</a></p>
+    <div id="txt"></div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = Array.from(document.querySelectorAll("p"));
+        const time = 1000;
+        const delay1 = time / elements.length;
+        elements.forEach((el, index) => {
+            const delay2 = index * delay1;
+            el.style.animationDelay = `${delay2}ms`;
+        });
+
+        fetch("/txt")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("txt").innerHTML = html;
+        });
+
+        fetch("/music")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("music").innerHTML = html;
+        });
+    });
+    </script>
+</body>
+</html>

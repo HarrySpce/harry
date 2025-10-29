@@ -1,0 +1,12 @@
+{
+	"name": "harry",
+	"main": "src/main.js",
+	"compatibility_date": "2025-10-28",
+	"observability": {
+		"enabled": true
+	},
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./public"
+	}
+}
