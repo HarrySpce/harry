@@ -22,3 +22,35 @@ to right,
 #0f4c5c 100%
 );
 }
+
+.t2 {
+background: linear-gradient(
+to right,
+#cad2c5 0%,
+#cad2c5 20%,
+#84a98c 20%,
+#84a98c 40%,
+#52796f 40%,
+#52796f 60%,
+#354f52 60%,
+#354f52 80%,
+#2f3e46 80%,
+#2f3e46 100%
+);
+}
+
+.t3 {
+background: linear-gradient(
+to right,
+#7400b8 0%,
+#7400b8 20%,
+#5e60ce 20%,
+#5e60ce 40%,
+#4ea8de 40%,
+#4ea8de 60%,
+#56cfe1 60%,
+#56cfe1 80%,
+#72efdd 80%,
+#72efdd 100%
+);
+}
