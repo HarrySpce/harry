@@ -34,27 +34,6 @@ text-align: right;
 #music {
 color: #bbbbbb;
 }
-#top {
-width: 100vw;
-height: 10px;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 1;
-background: linear-gradient(
-to right,
-#5f0f40 0%,
-#5f0f40 20%,
-#9a031e 20%,
-#9a031e 40%,
-#fb8b24 40%,
-#fb8b24 60%,
-#e36414 60%,
-#e36414 80%,
-#0f4c5c 80%,
-#0f4c5c 100%
-);
-}
 @media (max-width: 600px) {
 body {
 font-size: 22px;
