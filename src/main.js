@@ -18,6 +18,13 @@ export default {
                 return new Response(`<p>${song}</p><p><span style="color: #5c5c5c;">by</span> ${artist}</p>`, { 
                     headers: { "Content-Type": "text/html; charset=utf-8" } }
                 );
+
+            case "/url":
+                const urls = ["supert.one" , "harry.report" , "limiter.report" , "sharkhalo.cc"];
+                const randomURL = urls[Math.floor(Math.random() * urls.length)];
+                return new Response(randomURL, { 
+                    headers: { "Content-Type": "text/plain; charset=utf-8" } }
+                );
                 
             default: return Response.redirect(`${url.origin}/404`, 303);
         }
