@@ -3,8 +3,13 @@ export default {
         const url = new URL(request.url);
         switch (url.pathname) {
 
-            case "/txt":
+            case "/txt1":
                 return new Response("静けさ<br>勇気<br>知恵", {
+                    headers: { "Content-Type": "text/html; charset=utf-8" } }
+                );
+
+            case "/txt2":
+                return new Response("サンプラー", {
                     headers: { "Content-Type": "text/html; charset=utf-8" } }
                 );
 

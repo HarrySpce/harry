@@ -1,0 +1,48 @@
+body {
+background-color: #111111;
+font-family: "Space Grotesk", sans-serif;
+font-size: 36px;
+color: #5c5c5c;
+margin: 25px;
+line-height: 60%;
+}
+p {
+margin-bottom: 0;
+}
+a, a:visited {
+text-decoration: none;
+color: #5c5c5c;
+}
+#txt {
+position: fixed;
+bottom: 25px;
+right: 25px;
+color: #5c5c5c13;
+font-size: 100px;
+font-family: 'Noto Sans JP', sans-serif;
+font-weight: 500;
+pointer-events: none;
+user-select: none;
+line-height: 1.2;
+text-align: right;
+}
+#desc {
+color: #4747477a;
+margin-top: 25px;
+margin-bottom: 40px;
+line-height: 80%;
+}
+@media (max-width: 600px) {
+body {
+font-size: 22px;
+}
+#txt {
+font-size: 45px;
+right: 15px;
+bottom: 15px;
+}
+#desc {
+margin-top: 15px;
+margin-bottom: 30px;
+}
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="harry dot report foward slash stuff" property="og:title"/>
+    <meta content="💤" property="og:description"/>
+    <meta content="#ffafcc" data-react-helmet="true" name="theme-color"/>
+    <meta content="https://harry.report/img/stuff.png" property="og:image"/>
+    <title>stuff</title>
+    <link rel="icon" type="image/x-icon" href="img\stuff.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/bars.css">
+</head>
+<body>
+    <div class="top t3"></div>
+    <p>stuff</p>
+    <p><a href="https://github.com/HarrySpce/HarryWatch/releases/tag/1.1"><u>harryWatch</u></a></p>
+    <p id="desc">free limiter, no trackers</p>
+
+    <p><a href="https://api.harry.report"><u>d2 api timer</u></a></p>
+    <p id="desc">fetches current activity + past 8</p>
+
+    <p><a href="https://discord.com/oauth2/authorize?client_id=1402823535402946600"><u>solo / pini ops tracker</u></a></p>
+    <p id="desc">discord bot for tracking clears + pbs</p>
+
+    <p><a href="https://cdn.harry.report/EP133%20ALL%20PO-SAMPLES.pak" download><u>all po samples for ep133 .pak</u></a></p>
+    <p id="desc">430 samples, setup <a href="https://teenage.engineering/apps/ep-sample-tool"><u>here</u></p>
+
+    <p><a href="https://np.harry.report"><u>now playing</u></a></p>
+    <p id="desc" style="margin-bottom: 0;">spotify live music tracker</p>
+
+    <p><a href="https://harry.report/" style="text-decoration: none;"><span style="position: relative; background: linear-gradient(to right, #EF8244 0%, #8C3BCF 100%); background-clip: text; color: transparent;">home</span></a></p>
+        <div id="txt"></div>
+    <script>
+        fetch("/txt2")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("txt").innerHTML = html;
+        });
+    </script>
+</body>
+</html>
