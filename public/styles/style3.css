@@ -28,9 +28,9 @@ text-align: right;
 }
 #desc {
 color: #4747477a;
-margin-top: 25px;
-margin-bottom: 40px;
-line-height: 80%;
+font-size: 30px;
+margin-top: 15px;
+margin-bottom: 30px;
 }
 @media (max-width: 600px) {
 body {
@@ -42,7 +42,8 @@ right: 15px;
 bottom: 15px;
 }
 #desc {
-margin-top: 15px;
-margin-bottom: 30px;
+font-size: 18px;
+margin-top: 10px;
+margin-bottom: 20px;
 }
 }
