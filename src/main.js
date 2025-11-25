@@ -20,7 +20,7 @@ export default {
                 const recent = data.recenttracks.track[0];
                 const song = recent.name;
                 const artist = recent.artist["#text"];
-                return new Response(`<p>${song}</p><p><span style="color: #5c5c5c;">by</span> ${artist}</p>`, { 
+                return new Response(`<p><span style="position: relative; background: linear-gradient(to right, #EF8244 0%, #8C3BCF 100%); background-clip: text; color: transparent;">${song}</span></p><p><span style="color: #5c5c5c;">by</span> ${artist}</p>`, { 
                     headers: { "Content-Type": "text/html; charset=utf-8" } }
                 );
 
